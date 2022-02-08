@@ -14,6 +14,8 @@ import { NewCounterOutputComponent } from './ngrxCounter/new-counter-output/new-
 import { ButtonsComponent } from './SlefNgrxCounter/buttons/buttons.component';
 import { OutputComponent } from './SlefNgrxCounter/output/output.component';
 import {ParentComponent} from "./SlefNgrxCounter/parent/parent.component";
+import { NewCustomCounterInputComponent } from './ngrxCounter/new-custom-counter-input/new-custom-counter-input.component';
+import {FormsModule} from "@angular/forms";
 //import {counterReducer} from "./SlefNgrxCounter/ngrxStates/self.counter.reducer"; //v13
 
 
@@ -28,11 +30,14 @@ import {ParentComponent} from "./SlefNgrxCounter/parent/parent.component";
     NewCounterOutputComponent,
     ParentComponent,
     ButtonsComponent,
-    OutputComponent
+    OutputComponent,
+    NewCustomCounterInputComponent
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({counterAppModule: counterReducer}),  //Enable This For Version 10
+    StoreModule.forRoot({counterAppModule: counterReducer}),
+    FormsModule,
+    //Enable This For Version 10
     //StoreModule.forRoot({count: counterReducer}),       //Enable This For Version 13
   ],
   providers: [],
